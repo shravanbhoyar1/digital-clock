@@ -32,9 +32,14 @@
 
         .digital-clock-container {
             background-color: #C6D870;
-            padding: 50px 180px;
+            padding: 35px 150px;
             border-radius: 9px;
             border: #8FA31E;
+            display: flex;
+            flex-direction: row;
+        }
+        .font{
+            font-size: 28px;
         }
     </style>
 </head>
@@ -43,9 +48,28 @@
     <h1 class="heading">Digital Clock..🕒</h1>
     <div class="main-container">
         <div class="digital-clock-container">
-
+            <div class="font" id="hh">HH</div>
+            <div class="font"> : </div>
+            <div class="font" id="mm">MM</div>
+            <div class="font"> : </div>
+            <div class="font" id="ss">SS</div>
         </div>
     </div>
-</body>
+    <script>
+    const hhElement = document.getElementById("hh");
+    const mmElement = document.getElementById("mm");
+    const ssElemnet = document.getElementById("ss");
 
+    function showCurrentTime(){
+    const date = new Date();
+
+    hhElement.innerText = date.getHours();
+    mmElement.innerText = date.getMinutes();
+    ssElemnet.innerText = date.getSeconds();
+    
+    }
+    setInterval(showCurrentTime, 1000);
+    //setTimeout(showCurrentTime(),1000);
+</script>
+</body>
 </html>
