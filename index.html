@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digital clock</title>
+    <link href="https://fonts.cdnfonts.com/css/ds-digital" rel="stylesheet">
     <style>
         body {
             margin: 0;
@@ -32,14 +33,15 @@
 
         .digital-clock-container {
             background-color: #C6D870;
-            padding: 35px 150px;
+            padding: 35px 110px;
             border-radius: 9px;
             border: #8FA31E;
             display: flex;
             flex-direction: row;
         }
         .font{
-            font-size: 28px;
+            font-size: 48px;
+            font-family:'DS-Digital', sans-serif;
         }
     </style>
 </head>
@@ -62,11 +64,11 @@
 
     function showCurrentTime(){
     const date = new Date();
-
     hhElement.innerText = date.getHours();
     mmElement.innerText = date.getMinutes();
     ssElemnet.innerText = date.getSeconds();
-    
+
+ 
     }
     setInterval(showCurrentTime, 1000);
     //setTimeout(showCurrentTime(),1000);
